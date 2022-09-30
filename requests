@@ -1,0 +1,10 @@
+import requests
+from data_input import data
+
+URL = 'http://127.0.0.1:5000/predict'
+headers = {'Content-Type': 'application.json'}
+d = {'input': data}
+
+r = requests.get(URL, headers=headers, json=d)
+
+r.json()
